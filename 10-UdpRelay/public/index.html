@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<title>Demo Node.js to C App via UDP</title>
+	<link rel='stylesheet' href='/stylesheets/style.css'></link>
+</head>
+
+<body>
+	<div id='content'>
+		<h1>Node.js to C App via UDP</h1>
+		<div id='messages'></div>
+		
+		<form id='send-form' >
+			<p>
+				<b>Current Beat: 
+					<span id="beatName"></span>
+				</b>
+			</p>
+			<p>
+				<input type="button" id="beat1" value="None"/>
+				<input type="button" id="beat2" value="Rock #1"/>
+				<input type="button" id="beat3" value="Rock #2"/>
+			</p>
+			<p>
+				<b>Volume</b>
+			</p>
+			<p>
+				<input type="button" id="volUp"   value="Volume +"/>
+				<input type="text"   id="curVol"  size="3" readonly/>
+				<input type="button" id="volDown" value="Volume -"/>
+			</p>
+			<p>
+				<b>Tempo</b>
+			</p>
+			<p>
+				<input type="button" id="tempoUp"   value="Tempo +"/>
+				<input type="text"   id="curTempo"  size="3" readonly/>
+				<input type="button" id="tempoDown" value="Tempo -"/>
+			</p>
+		</form>
+	</div>
+	
+	<script src='/socket.io/socket.io.js' type='text/javascript'></script>
+	<script src='http://code.jquery.com/jquery-1.8.0.min.js' type='text/javascript'></script>
+	<script src='javascripts/udp_ui.js' type='text/javascript'></script>
+</body>
+</html>
